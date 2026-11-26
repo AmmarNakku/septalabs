@@ -442,7 +442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 20}
+  m_AnchoredPosition: {x: 0, y: 43}
   m_SizeDelta: {x: 920, y: 32}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &80608903
@@ -493,8 +493,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Klik Game View untuk membidik  \xB7  WASD bergerak  \xB7  E berinteraksi 
-    \xB7  Esc melepas mouse"
+  m_Text: "Klik layar untuk membidik  \xB7  WASD bergerak  \xB7  E berinteraksi 
+    \xB7  Esc lepas bidikan"
 --- !u!222 &80608905
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1428,7 +1428,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 24, y: -18}
-  m_SizeDelta: {x: 340, y: 36}
+  m_SizeDelta: {x: 340, y: 123.51}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &515285359
 MonoBehaviour:
@@ -1472,13 +1472,16 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 3
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Sampel: 0 / 3 | Poin: 0'
+  m_Text: 'Sampel: 0 / 3 | Poin: 0
+
+
+    Waktu: 00:00'
 --- !u!222 &515285361
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4016,7 +4019,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Ammar Mohamad Qatar \u2014 2491345011 \u2014 GJ24B"
+  m_Text: Ammar Mohamad Qatar - 2491345011 - GJ24B
 --- !u!222 &1202003877
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4527,7 +4530,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 7}
-  m_SizeDelta: {x: 460, y: 42}
+  m_SizeDelta: {x: 460, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1515527507
 CanvasRenderer:
@@ -5934,7 +5937,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 72}
+  m_AnchoredPosition: {x: 0, y: 210}
   m_SizeDelta: {x: 680, y: 34}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &2051772564
@@ -5965,7 +5968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Text
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5254902, g: 1, b: 0.9490196, a: 1}
+  m_Color: {r: 1, g: 0.2694413, b: 0.2396226, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -44,7 +44,8 @@ public sealed class ZonaSterilLab : MonoBehaviour
 
         selesai = true;
         HapusNotifikasi();
-        teksHasil.text = $"Sampel: {progres.JumlahSampel} / 3   |   Total poin: {progres.TotalPoin}";
+        progres.HentikanTimer();
+        teksHasil.text = $"Sampel: {progres.JumlahSampel} / 3   |   Total poin: {progres.TotalPoin}\nWaktu misi: {progres.WaktuMisi}";
         crosshair.SetActive(false);
         petunjukKontrol.SetActive(false);
         panelSelesai.SetActive(true);
