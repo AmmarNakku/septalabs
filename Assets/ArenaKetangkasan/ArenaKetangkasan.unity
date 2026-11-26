@@ -3353,6 +3353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1728416702}
+  - component: {fileID: 1728416703}
   m_Layer: 0
   m_Name: Visual Tupai
   m_TagString: Untagged
@@ -3376,6 +3377,19 @@ Transform:
   - {fileID: 922031561}
   m_Father: {fileID: 301}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1728416703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728416701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82ac4650bb924869b4f57bc5f3420472, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::AnimasiTupai
+  model: {fileID: 922031561}
 --- !u!1 &1756990822
 GameObject:
   m_ObjectHideFlags: 0

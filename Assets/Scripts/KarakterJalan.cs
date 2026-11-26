@@ -13,6 +13,7 @@ public sealed class KarakterJalan : MonoBehaviour
 
     private Rigidbody badan;
     private BoxCollider bentuk;
+    private AnimasiTupai animasi;
     private bool mintaLompat;
     private bool sedangBergerak;
     private bool sedangMelompat;
@@ -23,6 +24,10 @@ public sealed class KarakterJalan : MonoBehaviour
     {
         badan = GetComponent<Rigidbody>();
         bentuk = GetComponent<BoxCollider>();
+        if (visual != null)
+        {
+            visual.TryGetComponent(out animasi);
+        }
     }
 
     private void Update()
@@ -82,18 +87,25 @@ public sealed class KarakterJalan : MonoBehaviour
         }
 
         bool turun = badan.linearVelocity.y <= 0.1f;
-        bool menapak = turun && (mintaLompat || sedangMelompat) && Menapak();
+        bool menapak = turun && (mintaLompat || sedangMelompat || animasi != null) && Menapak();
         if (sedangMelompat && menapak)
         {
             sedangMelompat = false;
             Debug.Log("Pemain mendarat.", this);
         }
 
-        if (mintaLompat && menapak && kecepatanLompat > 0f)
+        bool mulaiLompat = mintaLompat && menapak && kecepatanLompat > 0f;
+        if (mulaiLompat)
         {
             sedangMelompat = true;
             badan.AddForce(Vector3.up * kecepatanLompat, ForceMode.VelocityChange);
             Debug.Log("Pemain melompat.", this);
+        }
+
+        if (animasi != null)
+        {
+            float laju = kecepatan > 0f ? saatIni.magnitude / kecepatan : 0f;
+            animasi.Perbarui(laju, menapak && !mulaiLompat, mulaiLompat || !turun);
         }
 
         mintaLompat = false;
@@ -115,7 +127,13 @@ public sealed class KarakterJalan : MonoBehaviour
         mintaLompat = false;
         sedangBergerak = false;
         sedangMelompat = false;
+        animasi?.SiapkanAwal();
         enabled = true;
+    }
+
+    private void OnDisable()
+    {
+        animasi?.Bekukan();
     }
 
     private void OnCollisionEnter(Collision benturan)
